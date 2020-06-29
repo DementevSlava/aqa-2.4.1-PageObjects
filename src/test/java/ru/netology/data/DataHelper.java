@@ -16,10 +16,6 @@ public class DataHelper {
         return new AuthInfo("vasya", "qwerty123");
     }
 
-    public static AuthInfo getOtherAuthInfo(AuthInfo original) {
-        return new AuthInfo("petya", "123qwerty");
-    }
-
     @Value
     public static class VerificationCode {
         private String code;
@@ -32,15 +28,14 @@ public class DataHelper {
     @Value
     public static class CardInfo {
         private String cardNumber;
-        private String cardBalance;
     }
 
     public static CardInfo getFirstCardInfo() {
-        return new CardInfo("5559000000000001", "10000");
+        return new CardInfo("5559000000000001");
     }
 
     public static CardInfo getSecondCardInfo() {
-        return new CardInfo("5559000000000002", "10000");
+        return new CardInfo("5559000000000002");
     }
 
     public static int balanceUp(int balance, int amount) {

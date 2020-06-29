@@ -10,10 +10,11 @@ import static com.codeborne.selenide.Selenide.open;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class MoneyTransferTest {
-    String amount = "5000";
+
 
     @Test
     void shouldTransferFromSecondToFirst() {
+        String amount = "5000";
         open("http://localhost:9999");
         val loginPage = new LoginPage();
         val verificationPage = loginPage.validLogin(DataHelper.getAuthInfo());
@@ -35,6 +36,7 @@ public class MoneyTransferTest {
 
     @Test
     void shouldTransferFromFirstToSecond() {
+        String amount = "4000";
         open("http://localhost:9999");
         val loginPage = new LoginPage();
         val verificationPage = loginPage.validLogin(DataHelper.getAuthInfo());
